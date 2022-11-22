@@ -19,10 +19,13 @@ Extensive experiments on a wide range of images demonstrate the superiority of o
 <img src="assets/teaser.png" >
 </p>
 
-
-## Setup
+## Prerequisites
+- Linux
+- Python 3
+- CPU or NVIDIA GPU + CUDA CuDNN
 
 ## Datasets
+You can use either Places50 dataset in [SinGAN](https://github.com/tamarott/SinGAN) or arbitray images collected online.
 
 ## Training the model
 To train the model, execute the training scripts in the scripts folder or the following command. 
@@ -52,14 +55,14 @@ These testing results are then saved in the folder ./RESULT/sinddpm-(yourimage)-
 
 ## Pretrained models
 
+## Image Manipulation
+
 # Additional information
 
 ## Citation
 If you use this work please cite
 ```
 ```
-
-## License
 
 ## Acknowledge
 Our code is developed based on [guided-diffusion](https://github.com/openai/guided-diffusion). We also thank [SinGAN](https://github.com/tamarott/SinGAN) for SIFID computation, [stargan-v2](https://github.com/clovaai/stargan-v2) for LPIPS computation.
