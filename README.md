@@ -9,9 +9,6 @@ The code aims to allow the users to reproduce and extend the results reported in
 
 This repository implements the SinDiffusion model, 
 
-which generates realistic looking images from semantic label maps. In addition, many different images can be generated from any given label map by simply resampling a noise vector (first two rows of the figure below). The model also allows to just resample parts of the image (see the last two rows of the figure below). Check out the paper for details, as well as the appendix, which contains many additional examples.
-
-
 <p align="center">
 <img src="teaser.png" >
 </p>
