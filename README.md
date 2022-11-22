@@ -16,7 +16,7 @@ Second, we identify that a patch-level receptive field of the diffusion network 
 Extensive experiments on a wide range of images demonstrate the superiority of our proposed method for modeling the patch distribution.
 
 <p align="center">
-<img src="teaser.png" >
+<img src="assets/teaser.png" >
 </p>
 
 
