@@ -7,12 +7,17 @@ The code aims to allow the users to reproduce and extend the results reported in
 
 # Overview
 
-This repository implements the SinDiffusion model, 
+This repository implements the SinDiffusion model, leveraging denoising diffusion models to capture internal distribution of patches from a single natural image. 
+SinDiffusion significantly improves the quality and diversity of generated samples compared with existing GAN-based approaches. 
+It is based on two core designs. 
+First, SinDiffusion is trained with a single model at a single scale instead of multiple models with progressive growing of scales which serves as the default setting in prior work. 
+This avoids the accumulation of errors, which cause characteristic artifacts in generated results.
+Second, we identify that a patch-level receptive field of the diffusion network is crucial and effective for capturing the image's patch statistics, therefore we redesign the network structure of the diffusion model.
+Extensive experiments on a wide range of images demonstrate the superiority of our proposed method for modeling the patch distribution.
 
 <p align="center">
 <img src="teaser.png" >
 </p>
-
 
 
 ## Setup
