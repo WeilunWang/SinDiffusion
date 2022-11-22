@@ -62,6 +62,7 @@ If you use this work please cite
 ## License
 
 ## Acknowledge
+Our code is developed based on [guided-diffusion](https://github.com/openai/guided-diffusion). We also thank [SinGAN](https://github.com/tamarott/SinGAN) for SIFID computation, [stargan-v2](https://github.com/clovaai/stargan-v2) for LPIPS computation.
 
 ## Contact
 Please feel free to open an issue or contact us personally if you have questions, need help, or need explanations.
