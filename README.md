@@ -20,10 +20,12 @@ Extensive experiments on a wide range of images demonstrate the superiority of o
 </p>
 
 ## Generation Results
+* **Generated images of arbitary resolution:**
 <p align='center'>  
   <img src='assets/diverse.png'/>
 </p>
 
+* **High-resolution single image generation:**
 <p align='center'>  
   <img src='assets/highres.png'/>
 </p>
@@ -60,17 +62,31 @@ python image_sample.py --data_dir data/yourimage.png --diffusion_steps 1000 --im
 ```
 These testing results are then saved in the folder ./RESULT/sinddpm-(yourimage)-(day)-(commitseq)/.
 
-## Measuring SIFID and LPIPS
-
-## Pretrained models
+## Pretrained models (Comming Soon)
+The pre-trained models will be released soon.
 
 ## Image Manipulation
+* **Text-guided image generation:**
+<p align='center'>  
+  <img src='assets/text-guided.png'/>
+</p>
+
+* **Image Outpainting:**
+<p align='center'>  
+  <img src='assets/outpainting.png'/>
+</p>
 
 # Additional information
 
 ## Citation
 If you use this work please cite
 ```
+@article{wang2022sindiffusion,
+  title={SinDiffusion: Learning a Diffusion Model from a Single Natural Image},
+  author = {Wang, Weilun and Bao, Jianmin and Zhou, Wengang and Chen, Dongdong and Chen, Dong and Yuan, Lu and Li, Houqiang},
+  journal={arXiv preprint arXiv:2211.12445},
+  year={2022}
+}
 ```
 
 ## Acknowledge
