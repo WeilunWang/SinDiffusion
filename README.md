@@ -3,7 +3,7 @@
 Official PyTorch implementation of "SinDiffusion: Learning a Diffusion Model from a Single Natural Image".
 The code aims to allow the users to reproduce and extend the results reported in the study. Please cite the paper when reporting, reproducing or extending the results.
 
-[[Arxiv (Comming Soon)]()] [[Project (Comming Soon)]()]
+[[Arxiv](https://arxiv.org/abs/2211.12445)] [[Project (Comming Soon)]()]
 
 # Overview
 
@@ -17,6 +17,15 @@ Extensive experiments on a wide range of images demonstrate the superiority of o
 
 <p align="center">
 <img src="assets/teaser.png" >
+</p>
+
+## Generation Results
+<p align='center'>  
+  <img src='assets/diverse.png'/>
+</p>
+
+<p align='center'>  
+  <img src='assets/highres.png'/>
 </p>
 
 ## Prerequisites
