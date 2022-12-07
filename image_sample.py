@@ -72,33 +72,14 @@ def main():
         diffusions.append(diffusion)
 
     logger.log("sampling...")
-    batch_prev = tv.transforms.ToTensor()(Image.open("datasets/mountains/1.png"))[None].repeat(args.batch_size, 1, 1, 1) * 2. - 1.
-    # batch_prev = batch_prev[:, :, :, 125:]
-    # batch_prev = None
     for current_scale in range(args.stop_scale + 1)[-1:]:
-        # model, diffusion = models[current_scale], diffusions[current_scale]
         model, diffusion = models[0], diffusions[0]
         current_factor = math.pow(args.scale_factor, args.stop_scale - current_scale)
         curr_h, curr_w = round(args.full_size[0] * current_factor), round(args.full_size[1] * current_factor)
         curr_h_pad, curr_w_pad = math.ceil(curr_h / 8) * 8, math.ceil(curr_w / 8) * 8
         pad_size = (0, curr_w_pad - curr_w, 0, curr_h_pad - curr_h)
-        # if batch_prev is not None:
-        #     batch_prev = F.interpolate(batch_prev, (curr_h, 250), mode='bilinear').cuda()
 
         model_kwargs = {}
-        # if batch_prev is None:
-        #     model_kwargs["y"] = None
-        # else:
-        #     model_kwargs['y'] = batch_prev
-
-        # model_kwargs["src"] = batch_prev
-        # model_kwargs["num_timesteps"] = 500
-        mask = th.zeros((args.batch_size, 1, curr_h, curr_w), dtype=th.float32).cuda()
-        mask[:, :, :, 250:] = 1
-        image = th.zeros((args.batch_size, 3, curr_h, curr_w), dtype=th.float32).cuda()
-        image[:, :, :, 250:] = batch_prev[:, :3]
-        model_kwargs["inpaint_image"] = image.cuda()
-        model_kwargs["inpaint_mask"] = mask.cuda()
 
         if any(pad_size):
             model_kwargs["pad_size"] = pad_size
